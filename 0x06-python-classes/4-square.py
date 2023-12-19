@@ -12,6 +12,11 @@ class Square:
         Args:
              size (int): The size of the new square
         """
+        self.size = size
+
+    def area(self):
+        """calculate the area of square"""
+        return (self.__size * self.__size)
 
     @property
     def size(self):
@@ -25,7 +30,3 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-
-    def area(self):
-        """ Return the area of the square"""
-        return (self.__size * self.__size)
