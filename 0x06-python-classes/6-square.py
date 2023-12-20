@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python3
 """ define a class named Square """
 
 
@@ -17,10 +17,6 @@ class Square:
         elif size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
-
-    def area(self):
-        """ Return the area of the square"""
-        return (self.__size * self.__size)
 
     @property
     def size(self):
@@ -48,6 +44,10 @@ class Square:
                 not all(num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
+
+    def area(self):
+        """ Return the area of the square"""
+        return (self.__size * self.__size)
 
     def my_print(self):
         """ Print the square with char '#' """
