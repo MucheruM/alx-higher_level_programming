@@ -22,6 +22,7 @@ class Square:
 
     @size.setter
     def size(self, value):
+        """ Mode setter for the size """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -35,6 +36,7 @@ class Square:
 
     @position.setter
     def position(self, value):
+        """ MOde setter for the position """
         if (not isinstance(value, tuple) or
                 len(value) != 2 or
                 not all(isinstance(num, int) for num in value) or
