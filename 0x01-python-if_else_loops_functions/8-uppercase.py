@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+A function definition that converts lowercase into uppercase
+"""
 def uppercase(str):
     for i in str:
         if ord("a") <= ord(i) <= ord("z"):
