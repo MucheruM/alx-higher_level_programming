@@ -2,8 +2,7 @@
 """
 A function definition that converts lowercase into uppercase
 """
-
-def uppercase(str):
+ def uppercase(str):
     for i in str:
         if ord("a") <= ord(i) <= ord("z"):
             i = chr(ord(i) - 32)
