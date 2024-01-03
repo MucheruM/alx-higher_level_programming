@@ -9,9 +9,9 @@
    str = input("Enter your string: ")
 """
 
-def uppercase(str): #Convert str from uppercase to lowercase
-    for i in str: #Look at chr in str and modify them individually
-        if ord("a") <= ord(i) <= ord("z"): #We check for the ASCII values ord()
-            i = chr(ord(i) - 32) #Convert them into UPPERCASE
-        print("{:s}".format(i), end="") #Print the result
+def uppercase(str): """Convert str from uppercase to lowercase"""
+    for i in str: """Look at chr in str and modify them individually"""
+        if ord("a") <= ord(i) <= ord("z"): """Check ASCII values using ord()"""
+            i = chr(ord(i) - 32) """Convert them into UPPERCASE"""
+        print("{:s}".format(i), end="") """Print the result"""
     print()
