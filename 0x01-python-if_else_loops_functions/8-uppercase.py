@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-def uppercase(str): """Function definition"""
+def uppercase(str):
     for i in str:
         if ord("a") <= ord(i) <= ord("z"):
             i = chr(ord(i) - 32) """Converting @ char"""
