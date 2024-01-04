@@ -3,13 +3,15 @@
 
 
 class Rectangle:
-    """The class definition"""
+    """Rectangle class"""
     def __init__(self, width=0, height=0):
+        """Creating an instance/object "instantiation with options h and w"""
         self.width = width
         self.height = height
 
     @property
     def width(self):
+        """Getter method for retrieving the width of the rectangle"""
         return self.__width
 
     @width.setter
@@ -22,6 +24,7 @@ class Rectangle:
 
     @height
     def height(self):
+        """Getter method for retrieving the height of the rectangle"""
         return self.__height
 
     @height_setter
