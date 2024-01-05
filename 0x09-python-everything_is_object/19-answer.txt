@@ -1,0 +1,4 @@
+def copy_list(l):
+    l1 = [1, 2, 3]
+    l = l1[:]
+    return(l)
