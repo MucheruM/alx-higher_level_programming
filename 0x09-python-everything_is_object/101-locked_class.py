@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""A class defining a no class or attribute and prevents new instances"""
 
 
 class LockedClass:
