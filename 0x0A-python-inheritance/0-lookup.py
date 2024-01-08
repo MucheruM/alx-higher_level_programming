@@ -3,4 +3,5 @@
 
 
 def lookup(obj):
+    """The function returns a list of available att and more"""
     return (dir(obj))
