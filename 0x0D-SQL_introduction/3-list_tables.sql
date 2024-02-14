@@ -1,3 +1,3 @@
--- This script lists all the tables of MySQL database
+-- This script lists all the tables of MySQL server
 -- The query list all the data
-SHOW * FROM mysql
+SHOW TABLES;
