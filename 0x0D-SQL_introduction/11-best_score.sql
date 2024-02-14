@@ -1,0 +1,2 @@
+-- List all record with a score >= 10 in the table of MySQL server
+SELECT `score`, `name` FROM `second_table` WHERE score >= 10 ORDER BY score DESC;
