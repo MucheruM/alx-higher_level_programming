@@ -8,3 +8,4 @@ CREATE USER
        IDENTIFIED BY 'user_0d_1_pwd'
 -- Give access to all priviliges
 GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
