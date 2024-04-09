@@ -1,5 +1,7 @@
 #!/usr/bin/node
 
+// Prints "C is fun" `n` number of times
+
 const n = parseInt(process.argv[2]);
 
 if (!n) {
