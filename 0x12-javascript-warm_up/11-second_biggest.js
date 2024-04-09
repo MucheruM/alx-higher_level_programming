@@ -2,11 +2,11 @@
 'use strict';
 
 function getSecondLargest (array) {
-    return (array.length > 1) ? array.sort((a, b) => b - a)[1] : 0;
+  return (array.length > 1) ? array.sort((a, b) => b - a)[1] : 0;
 }
 
 function convertToIntegerArray (array) {
-    return array.map((num) => parseInt(num));
+  return array.map((num) => parseInt(num));
 }
 
 const array = convertToIntegerArray(process.argv.slice(2));
