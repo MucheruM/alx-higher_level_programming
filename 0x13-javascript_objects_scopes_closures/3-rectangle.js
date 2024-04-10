@@ -1,5 +1,7 @@
 #!/usr/bin/node
 
+// Defines a Rectangle class
+
 class Rectangle {
   constructor (width, height) {
     if ((width > 0 && height > 0)) {
@@ -9,12 +11,12 @@ class Rectangle {
   }
 
   /**
-   * Print a rectangle using 'X'
+   * Prints the rectangle using the character 'X'
    */
   print () {
     for (let i = 0; i < this.height; i++) {
       for (let j = 0; j < this.width; j++) {
-        process.stdouwrit('X');
+        process.stdout.write('X');
       }
       process.stdout.write('\n');
     }
