@@ -1,13 +1,13 @@
 #!/usr/bin/node
-'use strict';
 
-function factorial (n) {
-  if (!n) {
-    return 1;
-  }
-
-  return n * factorial(n - 1);
+function fact (a) {
+  if (a === 0 || a === 1) { return (1); } else { return (a * (fact(a - 1))); }
 }
 
-const n = parseInt(process.argv[2], 10);
-console.log(factorial(n));
+const a = parseInt(process.argv[2]);
+
+if (!a) {
+  console.log(1);
+} else {
+  console.log(fact(a));
+}
