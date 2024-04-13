@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+""" A Script that assesses information in SQL server"""
 
 if __name__ == "__main__":
     import sys
