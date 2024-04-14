@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 
-""" The script logs into MySQLdp and,
-    returns the names of state,
-    strting with upper N
-"""
+""" The script logs into MySQLdp and returns the names of state,
+strting with upper N """
 
 if __name__ == "__main__":
     import sys
@@ -16,17 +14,18 @@ if __name__ == "__main__":
         user=username,
         password=password,
         database=db_name,
-        port=3306
-        )
+        port=3306,
+    )
 
-    cursor=conn.cursor()
+    cursor = conn.cursor()
     cursor.execute(
         """
-        SELECT*FROM states
-        WHERE name LIKE 'N%'
-        ORDER BY states.id:
+        SELECT * FROM states
+        WHERE name LIKE BINARY 'N%'
+        ORDER BY states.id;
         """
-        )
+    )
+
     result_set = cursor.fetchall()
 
     for row in result_set:
