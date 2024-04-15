@@ -4,33 +4,32 @@
 in the states table of the database where name matches the arg"""
 
 if __name__ == "__main__":
-        import sys
-        import MySQLdb
+    import sys
+    import MySQLdb
 
-        username, password, db_name, state_name = sys.argv[1:]
+    username, password, db_name, state_name = sys.argv[1:]
 
-        conn = MySQLdb.connect(
-            host="localhost",
-            user=username,
-            password=password,
-            database=db_name,
-            port=3306,
-        )
+    conn = MySQLdb.connect(
+        host="localhost",
+        user=username,
+        password=password,
+        database=db_name,
+        port=3306,
+    )
 
-        cursor = conn.cursor()
-        query = """
+    cursor = conn.cursor()
+    query = """
             SELECT * FROM states
             WHERE name LIKE BINARY 'Arizona%'
             ORDER BY states.id
         """
 
-        cursor.execute(query, (state_name + '%',))
+    cursor.execute(query, (state_name + '%',))
 
-        return_set = cursor.fetchall()
+    return_set = cursor.fetchall()
 
-        for row in return_set:
-                print(row)
+    for row in return_set:
+        print(row)
 
-        cursor.close()
-        conn.close()
-                                    
+    cursor.close()
+    conn.close()
