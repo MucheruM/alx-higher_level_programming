@@ -9,7 +9,7 @@ if __name__ == "__main__":
 
         username, password, db_name, state_name = sys.argv[1:]
 
-        conn = MySQLdp.connect(
+        conn = MySQLdb.connect(
             host="localhost",
             user=username,
             password=password,
@@ -22,9 +22,9 @@ if __name__ == "__main__":
             SELECT * FROM states
             WHERE name LIKE BINARY 'Arizona%'
             ORDER BY states.id
-        """.format(state_name)
+        """
 
-        cursur.execute(query)
+        cursor.execute(query, (state_name + '%',))
 
         return_set = cursor.fetchall()
 
