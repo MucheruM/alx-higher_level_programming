@@ -22,8 +22,8 @@ if __name__ == "__main__":
     # This query is unsafe for SQL injection
     query = """
             SELECT * FROM states
-            WHERE name LIKE BINARY 'Arizona%'
-            ORDER BY states.id
+            WHERE name LIKE BINARY '{}'
+            ORDER BY states.id;
         """.format(state_name)
 
     cursor.execute(query)
