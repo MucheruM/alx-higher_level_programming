@@ -18,13 +18,15 @@ if __name__ == "__main__":
     )
 
     cursor = conn.cursor()
+
+    # This query is unsafe for SQL injection
     query = """
             SELECT * FROM states
             WHERE name LIKE BINARY 'Arizona%'
             ORDER BY states.id
-        """
+        """.format(state_name)
 
-    cursor.execute(query, (state_name + '%',))
+    cursor.execute(query)
 
     return_set = cursor.fetchall()
 
