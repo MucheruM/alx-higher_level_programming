@@ -31,5 +31,5 @@ if __name__ == "__main__":
     for row in result_set:
         print(row)
 
-    cursor.closed()
-    conn.closed()
+    cursor.close()
+    conn.close()
