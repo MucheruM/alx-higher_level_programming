@@ -24,11 +24,11 @@ if __name__ == "__main__":
         WHERE name LIKE BINARY %s
         ORDER BY states.id;
     """
-    )
+   
 
     cursor.execute(query, (state_name + '%',))
 
-    return_set= cursor.fetchall()
+    return_set = cursor.fetchall()
 
     for row in return_set:
         print(row)
