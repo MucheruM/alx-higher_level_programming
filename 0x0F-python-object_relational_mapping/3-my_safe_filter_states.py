@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
-""" Writing a secure code from MySQL injection which takes and ar gets results from an SQL database"""
+""" Writing a secure code from MySQL injection which takes 
+an arg and gets the results from an SQL database"""
 
 if __name__ == "__main__":
     import sys
