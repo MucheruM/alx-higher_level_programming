@@ -18,13 +18,14 @@ if __name__ == "__main__":
 
     cursor = conn.cursor()
 
-    query = """
-    SELECT * FROM states
-    WHERE name LIKE BINARY %s
-    ORDER BY states.id;
-    """
-
-    cursor.execute(query, (state_name + '%',))
+    cursor.execute(
+        """
+        SELECT * FROM states
+        WHERE name LIKE BINARY %s
+        ORDER BY states.id;
+        """,
+        (state_name,),
+    )
 
     return_set = cursor.fetchall()
 
