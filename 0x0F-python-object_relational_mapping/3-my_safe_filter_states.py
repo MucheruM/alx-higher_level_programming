@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-""" Writing a secure code from MySQL injection which takes 
+""" Writing a secure code from MySQL injection which takes
 an arg and gets the results from an SQL database"""
 
 if __name__ == "__main__":
@@ -19,16 +19,16 @@ if __name__ == "__main__":
 
     cursor = conn.cursor()
 
-    cursor.execute(
-        """
+    query = """
         SELECT * FROM states
         WHERE name LIKE BINARY %s
         ORDER BY states.id;
-        """,
-        (state_name,),
+    """
     )
 
-    return_set = cursor.fetchall()
+    cursor.execute(query, (state_name + '%',))
+
+    return_set= cursor.fetchall()
 
     for row in return_set:
         print(row)
