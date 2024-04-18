@@ -31,7 +31,7 @@ def get_first_state(username: str, password: str, database: str) -> None:
         else:
             print("Nothing")
 
-            
+
 if __name__ == "__main__":
     try:
         get_first_state(sys.argv[1], sys.argv[2], sys.argv[3])

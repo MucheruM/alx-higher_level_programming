@@ -28,7 +28,7 @@ def get_state_by_name(
 
     with Session(engine) as session:
         state = session.query(State).filter(State.name == state_name).first()
-        
+
         if state:
             print(f"{state.id}")
         else:

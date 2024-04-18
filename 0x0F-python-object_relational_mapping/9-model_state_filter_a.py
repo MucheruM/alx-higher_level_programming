@@ -20,7 +20,7 @@ def get_state_with_letter_a(
         database (str): The database to connect to.
     """
     engine = create_engine(
-         f"mysql+mysqldb://{username}:{password}@localhost:3306/{database}"
+        f"mysql+mysqldb://{username}:{password}@localhost:3306/{database}"
     )
 
     Base.metadata.create_all(engine)
@@ -34,6 +34,7 @@ def get_state_with_letter_a(
 
         for state in state_with_a:
             print(f"{state.id}: {state.name}")
+
 
 if __name__ == "__main__":
     try:

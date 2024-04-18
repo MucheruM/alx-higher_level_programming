@@ -14,7 +14,7 @@ if __name__ == "__main__":
         password=password,
         database=db_name,
         port=3306,
-        )
+    )
 
     cursor = conn.cursor()
     cursor.execute(
@@ -22,7 +22,7 @@ if __name__ == "__main__":
         SELECT * FROM states
         ORDER BY states.id;
         """
-        )
+    )
 
     result_set = cursor.fetchall()
 

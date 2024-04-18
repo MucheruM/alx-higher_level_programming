@@ -32,6 +32,6 @@ if __name__ == "__main__":
             .filter(State.id == City.state_id)
             .all()
         )
-        
+
         for city in city_by_state:
             print(f"{city[0]}: ({city[1]}) {city[2]}")
