@@ -22,7 +22,7 @@ if __name__ == "__main__":
         SELECT cities.id, cities.name, state.name
         FROM cities
         JOIN states ON cities.state_id = states.id
-        ORDER BY cities.id
+        ORDER BY cities.id;
         """
     )
 
@@ -31,5 +31,5 @@ if __name__ == "__main__":
     for row in result_set:
         print(row)
 
-        cursor.close()
-        conn.close()
+    cursor.close()
+    conn.close()
