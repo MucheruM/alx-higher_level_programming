@@ -29,6 +29,7 @@ def get_all_states(username: str, password: str, database: str) -> None:
         for state in result:
             print(f"{state.id}: {state.name}")
 
+            
 if __name__ == "__main__":
     try:
         get_all_states(sys.argv[1], sys.argv[2], sys.argv[3])
