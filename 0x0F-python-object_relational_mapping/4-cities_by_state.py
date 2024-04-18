@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""This script lists all cities from the database `hbtn_0e_4_usa`"""
+""" Write a script that lists all cities from the database """
 
 if __name__ == "__main__":
     import sys
@@ -19,9 +19,9 @@ if __name__ == "__main__":
     cursor = conn.cursor()
     cursor.execute(
         """
-        SELECT cities.id, cities.name, states.name
+        SELECT cities.id, cities.name, state.name
         FROM cities
-            INNER JOIN states ON states.id=cities.state_id
+            JOIN states ON cities.state_id = states.id
         ORDER BY cities.id;
         """
     )
