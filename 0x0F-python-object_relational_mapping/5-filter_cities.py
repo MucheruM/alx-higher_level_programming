@@ -29,8 +29,10 @@ if __name__ == "__main__":
     cursor.execute(query, (state_name,))
 
     result_set = cursor.fetchall()
-    for row in result_set:
-        print(row)
+
+    # Concatenate cities.name into a str separated by commas
+    cities = ', '.join(row[0] for row in result_set)
+    print(cities)
 
     cursor.close()
     conn.close()
