@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-""" Write a script that lists all cities from the database """
+"""This script lists all cities from the database `hbtn_0e_4_usa`"""
 
 if __name__ == "__main__":
     import sys
@@ -31,5 +31,5 @@ if __name__ == "__main__":
     for row in result_set:
         print(row)
 
-    cursor.close()
-    conn.close()
+        cursor.close()
+        conn.close()
