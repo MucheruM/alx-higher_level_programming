@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 
-""" A script that creates the State “California” with the
-City “San Francisco” from the database hbtn_0e_100_usa"""
+"""This script creates the State object 'California' with the City
+'San Francisco' in the database `hbtn_0e_100_usa."""
 
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 from relationship_city import City
-from relationship_state import state, Base
+from relationship_state import State, Base
 
 if __name__ == "__main__":
     try:
